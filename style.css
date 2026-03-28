@@ -1,0 +1,167 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Animated background */
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+background-size:400% 400%;
+animation:gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Glass container */
+
+.container{
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(12px);
+padding:40px;
+width:400px;
+border-radius:24px;
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+border:1px solid rgba(255,255,255,0.5);
+text-align:center;
+transition:0.3s;
+}
+
+.container:hover{
+transform:translateY(-5px);
+}
+
+/* Typography */
+
+h1{
+color:#2d3436;
+margin-bottom:5px;
+font-weight:800;
+}
+
+.subtitle{
+color:#636e72;
+margin-bottom:30px;
+font-size:14px;
+}
+
+/* Inputs */
+
+.input-group{
+text-align:left;
+margin-bottom:20px;
+}
+
+label{
+font-size:12px;
+font-weight:700;
+color:#2d3436;
+margin-bottom:6px;
+display:block;
+text-transform:uppercase;
+}
+
+input{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:2px solid #e0e0e0;
+background:#f9f9f9;
+font-size:15px;
+transition:0.3s;
+}
+
+input:focus{
+border-color:#23a6d5;
+background:#fff;
+box-shadow:0 0 0 4px rgba(35,166,213,0.1);
+outline:none;
+}
+
+/* Button */
+
+.btn{
+width:100%;
+padding:16px;
+background:linear-gradient(135deg,#667eea,#764ba2);
+color:white;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 4px 15px rgba(118,75,162,0.3);
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 25px rgba(118,75,162,0.4);
+}
+
+/* Result */
+
+.result{
+margin-top:30px;
+padding-top:20px;
+border-top:1px solid rgba(0,0,0,0.05);
+}
+
+h2{
+font-size:28px;
+color:#2d3436;
+margin-bottom:15px;
+}
+
+/* Progress bar */
+
+.progress{
+background:#e0e0e0;
+height:12px;
+border-radius:10px;
+margin:15px 0;
+overflow:hidden;
+}
+
+.bar{
+height:100%;
+border-radius:10px;
+transition:width 1s ease-in-out;
+}
+
+/* Status */
+
+.status{
+font-weight:700;
+margin-top:10px;
+}
+
+.info{
+background:#e6fffa;
+color:#00b894;
+border:1px solid #b2f5ea;
+margin-top:10px;
+font-size:13px;
+padding:8px;
+border-radius:8px;
+}
+
+.warning{
+background:#fff5f5;
+color:#e74c3c;
+border:1px solid #feb2b2;
+margin-top:10px;
+font-size:13px;
+padding:8px;
+border-radius:8px;
+}

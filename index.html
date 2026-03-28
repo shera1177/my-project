@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attendance Calculator</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Attendance Calculator</h1>
+<p class="subtitle">Keep track of your class performance</p>
+
+<form method="POST">
+
+<div class="input-group">
+<label>Total Classes</label>
+<input type="number" name="total" placeholder="e.g. 100" required>
+</div>
+
+<div class="input-group">
+<label>Classes Attended</label>
+<input type="number" name="attended" placeholder="e.g. 85" required>
+</div>
+
+<div class="input-group">
+<label>No Attendance</label>
+<input type="number" name="missed" placeholder="e.g. 15" required>
+</div>
+
+<button type="submit" class="btn">Calculate Now</button>
+
+</form>
+
+{% if attendance %}
+
+<div class="result">
+
+<h2>{{attendance|round(2)}}%</h2>
+
+<div class="progress">
+<div class="bar" style="width:{{attendance}}%; background:{{color}}"></div>
+</div>
+
+<p class="status">Status: {{status}}</p>
+
+{% if skip %}
+<p class="info">You can skip {{skip}} classes.</p>
+{% endif %}
+
+{% if need %}
+<p class="warning">You must attend {{need}} classes to reach 75%.</p>
+{% endif %}
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
